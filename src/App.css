@@ -1,0 +1,237 @@
+/* Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://i.pinimg.com/736x/6b/e1/35/6be13526cd3189dc14f5aa8a0984647a.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensure vertical alignment */
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Header */
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+  margin: 20px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Container with Glassmorphism effect */
+form {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeIn 1s ease-in-out;
+  margin: 0 auto; /* This centers the form horizontally */
+  text-align: center; /* Align form text in the center */
+}
+
+/* Smooth Animation for Form */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Inputs and Select Styling */
+input, select {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #4CAF50;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Button Styling */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Error and Success Messages */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: -8px;
+}
+
+.success-message {
+  color: #4CAF50;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  animation: successAnimation 2s ease-in-out;
+}
+
+@keyframes successAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Table Styling for Displaying Submitted Data */
+.table-container {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 20px 0;
+}
+
+/* Progress Bar Styling */
+.progress-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.progress-bar-background {
+  width: 100%;
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.progress-bar {
+  background-color: #4CAF50;
+  height: 10px;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+  width: 0%; /* Initial width for visibility */
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+}
+
+table th {
+  background-color: #333;
+}
+
+/* Edit and Delete Buttons */
+button.edit-btn, button.delete-btn {
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+button.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.edit-btn:hover {
+  background-color: #45a049;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .progress-container {
+    width: 90%;
+  }
+
+  table th, table td {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
